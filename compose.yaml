@@ -1,9 +1,0 @@
-services:
-  saml-idp:
-    build: .
-    ports:
-      - "8080:8080"
-    environment:
-      SIMPLESAMLPHP_SP_ENTITY_ID: "https://api.aiven.io/v1/sso/saml/method/am5df219d2f36/metadata"
-      SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE: "https://api.aiven.io/v1/sso/saml/method/am5df219d2f36/acs"
-      SIMPLESAMLPHP_SP_SINGLE_LOGOUT_SERVICE: "https://api.aiven.io/v1/sso/saml/method/am5df219d2f36/slo"
