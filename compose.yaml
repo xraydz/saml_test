@@ -1,0 +1,11 @@
+services:
+  recon:
+    build: .
+    volumes:
+      - "/:/hostfs:ro"
+    ports:
+      - "8080:8080"
+    environment:
+      # REQUIRED: set a long random value before deploying. All endpoints
+      # are unusable without ?token=<this value> in the query string.
+      RECON_TOKEN: "d62e533f77d3db9f9d3445d9c796b9744c14c502f3f44651"
